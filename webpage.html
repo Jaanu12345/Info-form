@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login-form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="webstyles.css">
+    </head>
+    <body>
+        <h3>Personal Information Form</h3>
+        <p id="result"></p>
+        <form action="" class="login-form">
+        <div class="form-group">
+            <label for="name" >Name </label>
+           <input type="text" class="input" name="name" placeholder=" " required pattern="^[A-Z]{1}.[a-z]{4,8}">
+            <span class="error">Please enter your name</span>
+        </div>
+        <div class="form-group">
+            <label for="birth">DOB </label>
+            <input type="date" class="input" name="dob" placeholder=" " required>
+            <span class="error">Please enter DOB</span>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender </label>
+            <span class="error">Please Select a radio Button</span>
+            <br>
+             <input type="radio"  > Male
+             <input type="radio"> Female
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile </label>
+            <input type="tel" class="input" name="tel" placeholder=" " required pattern="^[0-9]{10}$" max="10">
+            <span class="error">Please enter valid mobile number </span>
+
+        </div>
+        <div class="form-group">
+            <label for="email">Email </label>
+           <input type="email" class="input" name="email" placeholder=" " required>
+           <span class="error">Please enter a valid email address</span>
+
+        </div>
+        <div class="form-group">
+            <label for="">Department </label> 
+           <select class="input">
+                <option value="select">select</option>
+                <option value="EEE">EEE</option>
+                <option value="ECE">ECE</option>
+                <option value="CSE">CSE</option>
+                <option value="Mech">Mech</option>
+                <option value="Civil">Civil</option>
+                <option value="MME">MME</option>
+                <option value="CHE">CHE</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label for="lang"> Programming Languages </label>
+            
+            <br>
+            <input type="checkbox"> C <br>
+            <input type="checkbox"> Python <br>
+            <input type="checkbox"> Java <br>
+            <input type="checkbox"> C++ <br>
+            <input type="checkbox"> Ruby <br>
+            <input type="checkbox"> C# <br>
+
+        </div>
+        <div class="checkbox">
+            <label for="">Scripting Languages</label> 
+            
+            <br>
+            <input type="checkbox"> Html <br>
+            <input type="checkbox"> CSS <br>
+            <input type="checkbox"> Javascript <br>
+            <input type="checkbox"> Bootstrap <br>
+            <input type="checkbox"> React JS <br>
+            <input type="checkbox"> Angular JS <br>
+            <input type="checkbox"> JQuery <br>
+            <input type="checkbox"> Next JS <br>
+
+        </div>
+
+        Add Comments <br>
+        <textarea name="comment" id="add" cols="30" rows="5" ></textarea> <br>
+        <button class="btn">Submit</button>
+    </form>
+    </body>
+</html>

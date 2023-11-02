@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+div{
+    padding: 8px;
+    font-size: 20px;
+}
+
+h3{
+    text-align: center;
+}
+.login-form {
+    
+    /* margin: 8px;
+    padding: 8px;
+    /* text-align: center; 
+    border-style: solid;
+    border-width: 2px; */
+    /* align-items: center; */
+    background-color: white;
+    border-style: solid ;
+    border-color: lightgray;
+    border-width: 2px;
+    border-radius: 15px;
+    margin: 24px;
+    padding: 12px;
+    text-align: justify;
+
+    /* height: 110px; */
+    width: 30%;
+    margin: 0 460px;
+
+}
+
+.form-group{
+    /* margin-top: 12px; */
+    margin: 4px;
+    padding: 12px;
+}
+
+/* input{
+    width: 50%;
+} */
+
+.input{
+    width: 50%;
+    padding: 8px;
+    border-radius: 10px;
+    border-width: none;
+}
+
+.checkbox{
+    padding: 12px;
+    text-align: justify;
+    /* margin-left: 50px; */
+    
+}
+
+#add{
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 4px;
+    border: 1px solid gray;
+}
+.btn:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+form > div {
+    margin-top: 18px;
+    /* position: relative; */
+}
+
+form > div > input{
+    /* width: 95%; */
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+form > div > span.error{
+    display: none;
+    font-size: 0.8em;
+    position: absolute;
+}
+
+/* form > div > input:invalid:not(:focus):not(:placeholder-shown) ~ .error{
+    display: block;
+    color: red;
+} */
+form > div > input:valid(:focus) {
+    color: green;
+} 
+form input[type='submit'] {
+    width: 100%;
+    display: block;
+    margin-top: 18px;
+
+}
+
+form input:invalid:not(:focus) ~ #result{
+    color: red;
+    display: block;
+}
