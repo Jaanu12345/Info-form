@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CVmaker</title>
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Resume Details</div>
+    <div class="content">
+      <form action="#" id="form">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" id="name" placeholder="Enter your name">
+          </div>
+          <div class="input-box">
+            <span class="details">Father Name</span>
+            <input type="text" id="fname" placeholder="Enter the name" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Mother Name</span>
+            <input type="text" placeholder="Enter the name" id="mname" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="text" placeholder="DD-MM-YYYY" id="dob" required="">
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" id="email" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" id="phno" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Marital status</span>
+            <input type="text" placeholder="single/married" id="marty" required="">
+          </div><div class="input-box">
+            <span class="details">Nationality</span>
+            <input type="text" placeholder="Enter Your nation" id="nat" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <textarea rows=7 cols=14 placeholder="Enter Your Address" id="addr" required=""></textarea>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Graduation</span>
+            <input type="text" placeholder="Name of the degree" id="udegree" required="">
+            <input type="text" placeholder="College" id="uclg" required="">
+            <input type="text" placeholder="Percentage" id="uper" required="">
+            <input type="text" placeholder="Year of passing" id="uyear" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Intermidiate</span>
+            <input type="text" placeholder="Name of the college" id="cname" required="">
+            <input type="text" placeholder="Board name" id="cboard" required="">
+            <input type="text" placeholder="Percentage" id="cper" required="">
+            <input type="text" placeholder="Year of passing" id="cyear" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Schooling</span>
+            <input type="text" placeholder="Name of the school" id="sname" required="">
+            <input type="text" placeholder="Board name" id="sboard" required="">
+            <input type="text" placeholder="Percentage" id="sper" required="">
+            <input type="text" placeholder="Year of passing" id="syear" required="">
+          </div>
+          
+          
+        </div>
+        <div class="gender-details">
+            <span class="gender-title">Gender</span><br>
+            <label class="genderm">
+          <input type="radio" name="gender" id="male"> Male</label>
+          <label class="genderf">
+          <input type="radio" name="gender" id="female"> Female</label>
+          
+          
+          <div class="category">
+            <label for="dot-1">
+            <span class="do one"></span>
+            <span class="gender"></span>
+          </label>
+          <label for="dot-2">
+            <span class="dt two"></span>
+            <span class="gender"></span>
+          </label>
+           
+          </div>
+          <div class="user-details">
+           <div class="input-box">
+            <span class="details">Technical Skill</span>
+            <input type="text" placeholder="Enter the Skills you have" id="tech" required="">
+          </div> <div class="input-box">
+            <span class="details">Languages known</span>
+            <input type="text" placeholder="Enter separated by ," id="lang" required="">
+          </div> <div class="input-box">
+            <span class="details">Hobbies</span>
+            <input type="text" placeholder="Enter separated by ," id="hobb" required="">
+          </div> <div class="input-box">
+            <span class="details">Personality Traits</span>
+            <input type="text" placeholder="Enter separated by ," id="personal" required="">
+          </div>
+        <div class="input-box">
+            <span class="details">Internship</span>
+            <input type="text" placeholder="Enter the role and company" id="intern" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Project</span>
+            <input type="text" placeholder="Enter the Title of the project" id="project" required="">
+          </div>
+          <div class="input-box">
+            <span class="details">Certificates</span>
+            <input type="text" placeholder="Enter your Certificate" id="certi" required="">
+            
+          </div>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Generate Resume">
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js" ></script>
+
+  <script>
+var form=document.getElementById("form")
+form.addEventListener('submit',function(event){
+event.preventDefault();
+
+var name=document.getElementById("name").value
+var fname=document.getElementById("fname").value
+var mname=document.getElementById("mname").value
+var dob=document.getElementById("dob").value
+var marity=document.getElementById("marty").value
+var nat=document.getElementById("nat").value
+var addr=document.getElementById("addr").value
+var personal=document.getElementById("personal").value
+var tech=document.getElementById("tech").value
+var lang=document.getElementById("lang").value
+
+
+var uclg=document.getElementById("uclg").value
+var udegree=document.getElementById("udegree").value
+var uyear=document.getElementById("uyear").value
+var uper=document.getElementById("uper").value
+
+
+var cname=document.getElementById("cname").value
+var cboard=document.getElementById("cboard").value
+var cper=document.getElementById("cper").value
+var cyear=document.getElementById("cyear").value
+
+
+
+var sname=document.getElementById("sname").value
+var sboard=document.getElementById("sboard").value
+var sper=document.getElementById("sper").value
+var syear=document.getElementById("syear").value
+
+
+var phno=document.getElementById("phno").value
+var email=document.getElementById("email").value
+
+
+var hobb=document.getElementById("hobb").value
+
+var intern=document.getElementById("intern").value
+var project=document.getElementById("project").value
+var certi=document.getElementById("certi").value
+
+
+var doc= new jsPDF();
+doc.setFillColor(25,25,112);
+doc.rect(5,0,200,22,'F');
+doc.setDrawColor(0);
+
+
+
+doc.setFontSize(22);
+doc.setTextColor(255,69,0);
+doc.text(name,80,8);
+doc.setFontSize(12);
+doc.setTextColor(255,255,255);
+doc.text("Mobile: +91"+phno,80,13);
+doc.text("Email: "+email,80,18);
+
+
+
+doc.line(100,23,100,190);
+doc.setLineWidth(1);
+
+
+
+doc.setFontSize(15);
+doc.setFontStyle('bold');
+doc.setTextColor(255,99,71);
+doc.text("PERSONAL DETAILS",10,28)
+doc.setTextColor(0,0,0);
+doc.setFontSize(12);
+doc.setFontStyle('Normal');
+doc.text("NAME           ",13,35);
+doc.text(":  "+name,50,35);
+doc.text("Father Name    ",13,40);
+doc.text(":  "+fname,50,40);
+doc.text("Mother Name    ",13,45);
+doc.text(":  "+mname,50,45);
+doc.text("Date of Birth  ",13,50);
+doc.text(":  "+dob,50,50);
+doc.text("Marital Status ",13,55);
+doc.text(":  "+marity,50,55);
+doc.text("Nationality    ",13,60);
+doc.text(":  "+nat,50,60);
+doc.text("Address	   ",13,65);
+doc.text(":  "+addr,40,65);
+
+
+doc.setFontSize(15);
+doc.setFontStyle('bold');
+doc.setTextColor(255,99,71);
+doc.text("EDUCATION QUALIFICATIONS",110,30)
+doc.setTextColor(0,0,0);
+doc.setFontSize(12);
+doc.setFontStyle('bold');
+doc.text("Graduation",112,35) 
+doc.setFontStyle('Normal');
+doc.text("University Name",113,40)
+doc.text(": "+uclg,160,40)
+doc.text("Course",113,45)
+doc.text(": "+udegree,160,45)
+doc.text("Year of Passing",113,50)
+doc.text(": "+uyear,160,50)
+doc.text("Score",113,55)
+doc.text(": "+uper,160,55)
+
+
+
+
+
+
+
+doc.setFontSize(12)
+doc.setFontStyle('bold'); 
+doc.text("Schooling",112,70)
+doc.setFontStyle('Normal');
+doc.text("School Name",113,75)
+doc.text(": "+sname,160,75)
+doc.text("Board Name",113,80)
+doc.text(": "+sboard,160,80)
+doc.text("Percentage",113,85)
+doc.text(": "+sper,160,85)
+doc.text("Year of Passing",113,90)
+doc.text(": "+syear,160,90)
+
+doc.setFontStyle('bold'); 
+doc.text("College",112,100);
+doc.setFontStyle('Normal');
+doc.text("College Name",113,105)
+doc.text(": "+cname,160,105)
+doc.text("Board Name",113,110)
+doc.text(": "+cboard,160,110)
+doc.text("Percentage",113,115)
+doc.text(": "+cper,160,115)
+doc.text("Year of Passing",113,120)
+doc.text(": "+cyear,160,120)
+
+
+doc.line(6,95,100,95);
+
+doc.setFontStyle('bold');
+doc.setFontSize(15);
+doc.setTextColor(255,99,71);
+doc.text("HIGHLIGHTS",10,105)
+doc.setTextColor(0,0,0);
+doc.setFontSize(12);
+
+doc.setFontStyle('bold');
+doc.text("TECHNICAL SKILLS",13,115)
+doc.setFontStyle('Normal');
+
+
+var techno = tech;
+var techArr = techno.split(',');
+
+console.log(techArr.length)
+if(techArr.length==11)
+{
+
+doc.text(techArr[0]+", "+techArr[1]+", "+techArr[2]+", "+techArr[3],15,120);
+doc.text(techArr[4]+", "+techArr[5]+", "+techArr[6]+", "+techArr[7],15,125);
+doc.text(techArr[8]+", "+techArr[9]+", "+techArr[10],15,130);
+}
+if(techArr.length==10)
+{
+
+doc.text(techArr[0]+", "+techArr[1]+", "+techArr[2]+", "+techArr[3],15,120);
+doc.text(techArr[4]+", "+techArr[5]+", "+techArr[6]+", "+techArr[7],15,125);
+doc.text(techArr[8]+", "+techArr[9],15,130);
+}
+if(techArr.length==9)
+{
+
+doc.text(techArr[0]+", "+techArr[1]+", "+techArr[2]+", "+techArr[3],15,120);
+doc.text(techArr[4]+", "+techArr[5]+", "+techArr[6]+", "+techArr[7],15,125);
+doc.text(techArr[8],15,130);
+}
+if(techArr.length==8)
+{
+
+doc.text(techArr[0]+", "+techArr[1]+", "+techArr[2],15,120);
+doc.text(techArr[3]+", "+techArr[4]+", "+techArr[5],15,125);
+doc.text(techArr[6]+", "+techArr[7],15,130);
+}
+if(techArr.length==7)
+{
+
+doc.text(techArr[0]+", "+techArr[1]+", "+techArr[2],15,120);
+doc.text(techArr[3]+", "+techArr[4]+", "+techArr[5],15,125);
+doc.text(techArr[6],15,130);
+}
+if(techArr.length==6)
+{
+
+doc.text(techArr[0]+", "+techArr[1],15,120);
+doc.text(techArr[2]+", "+techArr[3],15,125);
+doc.text(techArr[4]+", "+techArr[5],15,130);
+}
+if(techArr.length==5)
+{
+
+doc.text(techArr[0]+", "+techArr[1],15,120);
+doc.text(techArr[2]+", "+techArr[3],15,125);
+doc.text(techArr[4],15,130);
+}
+if(techArr.length==4)
+{
+
+doc.text(techArr[0]+", "+techArr[1],15,120);
+doc.text(techArr[2],15,125);
+doc.text(techArr[3],15,130);
+}
+if(techArr.length==3)
+{
+
+doc.text(techArr[0],15,120);
+doc.text(techArr[1],15,125);
+doc.text(techArr[2],15,130);
+}
+if(techArr.length==1)
+{
+
+doc.text(techArr[0],15,120);
+
+}
+if(techArr.length==2)
+{
+
+doc.text(techArr[0],15,120);
+doc.text(techArr[1],15,125);
+
+}
+
+doc.setFontSize(12);
+
+doc.setFontStyle('bold');
+doc.text("LANGUAGES",13,140);
+doc.setFontStyle('Normal');
+doc.text(lang,15,145);
+
+
+doc.setFontSize(12);
+
+doc.setFontStyle('bold');
+doc.text("HOBBIES",13,160);
+doc.setFontStyle('Normal');
+doc.text(hobb,15,165);
+
+
+doc.line(100,125,205,125);
+
+doc.setFontStyle('bold');
+doc.setFontSize(15);
+doc.setTextColor(255,99,71);
+doc.text("EXPERINCES",110,131)
+doc.setTextColor(0,0,0);
+doc.setFontSize(12);
+
+doc.setFontStyle('bold');
+doc.text("PROJETCS",112,140);
+doc.setFontStyle('Normal');
+doc.text(project,113,145);
+
+
+doc.setFontStyle('bold');
+doc.text("INTERNSHIP",112,155);
+doc.setFontStyle('Normal');
+doc.text(intern,113,160);
+
+doc.setFontStyle('bold');
+doc.text("CERTIFICATES",112,170);
+doc.setFontStyle('Normal');
+doc.text(certi,113,175);
+
+doc.line(6,190, 205,190);
+
+
+
+
+
+
+var personals = personal;
+var personalArr = personals.split(',');
+
+doc.setFontSize(13)
+doc.setFontStyle('bold');
+doc.setTextColor(255,99,71);
+doc.text("PERSONALITY TRAITS",10,200)
+doc.setTextColor(0,0,0);
+doc.setFontStyle('Normal');
+doc.text(personal,15,210);
+
+
+
+
+doc.setFontSize(13)
+doc.setFontStyle('bold');
+doc.setTextColor(255,99,71);
+doc.text("DECLARATION",10,235)
+doc.setTextColor(0,0,0);
+doc.setFontStyle('Normal');
+doc.text("I here by declare all the above mentioned details are true to the best of my knowledge.",13,240)
+doc.text("Kindly consider application and provide me an opportunity to serve in your Organisation ..",13,245)
+
+
+doc.line(6, 22, 6, 278);
+doc.line(204,22, 204, 278);
+doc.line(6,278, 205, 278);
+
+
+
+doc.save("resume.pdf")
+
+
+})  
+</script>
+
+
+</body></html>
