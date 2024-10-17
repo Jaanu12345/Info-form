@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Time to Travel</title>
+        <link rel="icon" href="./trip1.png">
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: lightgray;
+            }
+            #topbar{
+                padding: 20px;
+                background-color: navy;
+                text-align: center;
+                color: white;
+                margin: 0;
+            }
+            .menu-item{
+                font-size: 20px;
+                padding: 8px;
+                font-weight: 600;
+                color: #def3fd;
+                
+            }
+
+            a{
+                text-decoration: none;
+            }
+            a:visited{
+                color: white;
+            }
+            a:hover{
+                color: red;
+            }
+            /* div {
+                margin: 8px;
+            } */
+            .image-item{
+                width: 350px;
+                height: 300px;
+                
+            } 
+            .image-item:hover{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            }
+            .img{
+                box-shadow: 10;
+            }
+            
+            .caption{
+                font-size: 20px;
+                margin-top: 6px;
+                text-align: center;
+            }
+            /* .caption:hover{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            } */
+            .img{
+                background-color: #f2f6ff;
+                padding-bottom: 10px;
+            }
+            
+            /* .img:hover{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            } */
+            #footer{
+                padding: 36px;
+                background-color: navy;
+                text-align: center;
+                font-weight: 500;
+                color: white;
+            }
+            @media (max-width: 900px) and ( max-width: 768px) and (max-width: 450px) and (max-width: 200px){
+                #topbar{
+                    width: 100%;
+                }
+                img{
+                    width: 100%;
+                }
+                .image-item{
+                    width: 100%;
+                }
+                table > tr> td >div.img{
+                    width: 100%;
+                }
+                
+            }
+        </style>
+    </head>
+    <body >
+        
+        <div id="topbar">
+            <span class="menu-item"><a href="#trip">TRIPS</a></span>
+            <span class="menu-item"><a href="about.html">ABOUT</a></span>
+            <span class="menu-item"><a href="contact.html">CONTACT</a></span>
+        </div>
+        <div>
+            <img width="100%" height="500" style="margin: 0;" src="tour ops.webp" alt="Tourist placecs"/>
+        </div>
+        <h2 id="trip" style="text-align: center; color: navy;">My Travel Dairy</h2>
+        <table style="text-align: center; margin-left: auto; margin-right: auto;">
+            <tr>
+                <td>
+                    <div class="img">
+                        <a href="./1.html"><img class="image-item" src="KURNOOL.jpg" alt="Kondareddy Fort"></a>
+                        <p class="caption">Konda Reddy Fort,Kurnool</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="img">
+                        <a href="./2.html"><img class="image-item" src="Srisailam.avif" alt="Srisailm Temple"></a>
+                        <p class="caption">Srisailam,Nandyal</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="img">
+                        <a href="./3.html"><img class="image-item" src="gandikota.jpg" alt="Gandikota"></a>
+                        <p class="caption">Gandikota, Kadapa</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img">
+                        <a href="4.html"><img class="image-item" src="tirupati.webp" alt="Tirupati Temple"></a>
+                        <p class="caption">Tirupati, Chittoor</p>
+                    </div>
+
+                </td>
+                <td>
+                    <div class="img">
+                        <a href="5.html"><img class="image-item" src="amaravathi.jpg" alt="Amaravathi"></a>
+                        <p class="caption">Amaravathi, Guntur</p>
+                    </div>
+                </td>
+                <td> 
+                    <div class="img">
+                        <a href="6.html"><img class="image-item" src="ahobilam.jpg" alt="Ahobilam"></a>
+                        <p class="caption">Ahobilam,Ananthapur</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img">
+                        <a href="7.html"><img class="image-item" src="ARAKU-VALLEY.jpg" alt="Araku Valley"></a>
+                        <p class="caption">Araku Valley, Vizag</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="img">
+                        <a href="8.html"><img class="image-item" src="yaganti.jpg" alt="Yanganti Temple"></a>
+                        <p class="caption">Yaganti,Nandyal</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="img">
+                        <a href="9.html"><img class="image-item" src="ANANTHAGIRI-HILLS.jpg" alt="Anantagiri Hills"></a>
+                        <p class="caption">Anantagiri Hills,Hyderabad</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

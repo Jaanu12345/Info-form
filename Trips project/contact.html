@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact form</title>
+        <link rel="icon" href="./trip1.png">
+        <style>
+            body{
+                background-color: #f2f6ff;
+            }
+            #topbar{
+                padding: 20px;
+                background-color: navy;
+                text-align: center;
+                
+            }
+            .menu-item{
+                font-size: 20px;
+                padding: 8px;
+                font-weight: 600;
+            
+                
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            a:visited{
+                color: white;
+            }
+            a:hover{
+                color: red;
+            }
+            form {
+                /* background-color: white; */
+                width: 600px;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                /* border: 1px solid #ccc; */
+                padding-bottom: 105px;
+            }
+            div{
+                background-color: white;
+                
+            }
+            #form-heading{
+                
+                font-size: 32px;
+                background-color: #f2f6ff;
+                /* padding-top: 4px; */
+                /* padding-bottom: 5px; */
+            }
+            #input-wrapper{
+                padding-top: 80px;
+                padding-bottom: 40px;
+                padding-left: 80px;
+                padding-right: 80px;
+                
+            }
+            .input-box{
+                font-size: 18px;
+                padding-bottom: 10px;
+                margin-bottom: 32px;
+                border: 0;
+                border-bottom: 1px solid #ccc;
+                width: 100%;            
+            }
+            #btn-submit{
+                background-color: navy;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 24px;
+                padding-right: 24px;
+                /* width: 70px;
+                text-align: center; */
+                font-size: 18px;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 15px;
+            }
+            #footer{
+                padding: 36px;
+                background-color: navy;
+                text-align: center;
+                color: white;
+                /* font-weight: lighter; */
+                
+            }
+            .menu{
+                font-weight: lighter;
+                padding: 10px;
+                font-size: 16px;
+            }
+            
+
+        </style>
+    </head>
+    <body style="margin: 0;">
+        <div id="topbar">
+            <span class="menu-item"><a href="index.html">TRIPS</a></span>
+            <span class="menu-item"><a href="about.html">ABOUT</a></span>
+            <span class="menu-item"><a href="contact.html">CONTACT</a></span>
+        </div>
+        <form method="post" action="./index.html">
+            <h2 id="form-heading">Wanna come on my next trip? Contact Me. </h2>
+            <p id="result"></p>
+            <div id="input-wrapper">
+                <div>
+                    <input class="input-box" type="text" name="fname" placeholder="Full Name" required>
+                    
+                </div>
+                <div>
+                    <input class="input-box" type="email" name="email" placeholder="Email" required>
+                    
+                </div>
+                <div>
+                    <input class="input-box" type="number" name="contact-number" placeholder="Contact Number" required>
+                    
+                </div>
+                <!-- <a href="index.html"> <input id="btn-submit" class="btn" type="submit" name="submit" value="Submit" /></a> -->
+                <!-- <button id="btn-submit" onclick="return(validation())">Submit</button> -->
+                <input type="submit" value="Submit" id="btn-submit">
+            </div>
+        </form>
+        <footer >
+            <div id="footer">
+                <span class="menu">TRIPS</span>
+                <span class="menu">ABOUT</span>
+                <span class="menu">CONTACT</span>
+            </div>
+        </footer>
+
+        <!-- <script>
+            function validation() {
+                if(document.getElementsById('fname').value == ""){
+                    document.getElementById('result').innerHTML('Enter Full Name');
+                    return false;
+                }
+            }
+        </script> -->
+    </body>
+</html>
